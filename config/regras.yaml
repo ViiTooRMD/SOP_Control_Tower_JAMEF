@@ -1,0 +1,30 @@
+projeto:
+  nome: "S&OP Control Tower JAMEF"
+  horizonte_semanas: 8
+  versao_inicial: "SOP_2026_08_v01"
+
+filtros_base:
+  tipo_transporte: "ROD"
+  tipo_documento: "CTRC"
+  operacoes: ["B2B", "B2C"]
+  destino: ["CAPITAL", "INTERIOR 1", "INTERIOR 2"]
+
+perene_spot:
+  perene:
+    meses_faturados_minimo: 12
+    meses_acima_limite_minimo: 3
+    limite_receita_mensal: 200000
+  tratamento:
+    perene: "cliente_rota"
+    spot: "rota"
+
+capacidade:
+  ocupacao_atencao: 0.92
+  ocupacao_critica: 1.05
+  processos: ["Coleta", "Transbordo", "Transferência", "Entrega"]
+
+governanca:
+  cenarios: ["Conservador", "Base", "Agressivo"]
+  plano_aprovado_imutavel: true
+  justificativa_input_obrigatoria: true
+
